@@ -1,0 +1,322 @@
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+@import "@/scss/_variables.scss";
+@import "sweetalert2/src/sweetalert2.scss";
+
+
+@keyframes spin{
+   100% { transform: rotate(1turn); }
+}
+
+html,body,.v-application{
+    height: 100%; width: 100%;
+    padding: 0; margin: 0;
+    background-color: #F2F2F2;
+    background-color: black;
+}
+
+table.table
+{
+   width: 100%;
+   border-collapse: collapse;
+   thead{
+     border-bottom: 1px solid #dfdfdf;
+     border-top: 1px solid #dfdfdf;
+
+     td{ padding: 10px 15px; }
+   }
+   tbody
+   {
+     tr{
+       border-bottom: 1px solid #dfdfdf;
+       margin: 20px;
+     }
+     td{
+       padding: 15px;
+     }
+   }
+}
+
+#right-content
+{
+   margin-left: 235px;
+   margin-top: 50px;
+   // background-color: #F2F2F2;
+   min-height: 100%;
+    background-color: var(--v-background-base) !important;
+}
+
+
+
+.my-list-leave-to , .my-list-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.my-list-enter-active , .my-list-leave-active {
+  transition:  all .5s linear;
+}
+
+.v-image__image.v-image__image--cover{
+     background-size: contain;
+}
+
+body::-webkit-scrollbar-track
+{
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   border-radius: 10px;
+   background-color: #10163a;
+}
+body::-webkit-scrollbar
+{
+   width: 13px;
+   background-color: #10163a;
+}
+body::-webkit-scrollbar-thumb
+{
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+   background-color: $_mainColor;
+}
+
+// ====================== START Nav-site==================================
+section#navSide-section
+{
+   position: fixed;
+   width: 235px;
+   height: 100vh;
+   background: #8F86F1;
+   background: linear-gradient(70deg,#10163a,#10163a);
+   z-index: 4;
+   overflow-y: auto;
+
+         &::-webkit-scrollbar-track
+         {
+         	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+         	border-radius: 10px;
+         	background-color: #10163a;
+         }
+
+         &::-webkit-scrollbar
+         {
+         	width: 10px;
+         	background-color: #10163a;
+         }
+
+         &::-webkit-scrollbar-thumb
+         {
+         	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+         	background-color: $_mainColor;
+         }
+
+    #navTop-info
+    {
+       // padding: 10px;
+       padding: 0px;
+       text-align: center;
+    }
+
+    #navTop-items
+    {
+       .xs-title
+       {
+          color: white;
+          padding-left: 10px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-weight: bold;
+
+          margin-bottom: 5px;
+          margin-top: 6px;
+          color: #525bff;
+       }
+       ul{
+          padding-left: 0px;
+          li{
+             list-style: none;
+             color: #ffffff;
+
+             &.item{
+                border-top: 2px solid black;
+                &:last-child{ border-bottom: 2px solid black; }
+                a{
+                   padding: 15px 15px;
+
+                   color: antiquewhite;
+                   text-decoration: none;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    &:hover{
+                      padding-left: 30px;
+                      transition: .5s;
+                   }
+                   span{
+                     padding-left: 10px;
+                  }
+               }//End
+
+               &.active
+               {
+                  background: $_mainColor;
+                  a{
+                     padding-left: 8px;
+                     transition: .5s;
+                     color: antiquewhite;
+                  }
+               }//End &.active
+             }//End &.item
+         }//End li
+      }//End ul
+    }//End #navTop-items
+}//End section
+// ====================== END Nav-site==================================
+
+img.Preview_image
+{
+   border: 2px dashed black;
+   width: 100%;
+   // width: 30px;
+   min-height: 150px;
+   max-height: 250px;
+}
+
+img.Preview_image_small
+{
+   border: 2px dashed black;
+   width:auto;
+   min-width:150px;
+   min-height: 100px;
+   max-width: 100%;
+   height:auto;
+   max-height: 150px;
+   &.center{
+      display: table;
+      margin: 0 auto;
+   }
+}
+
+// ====================== START Page==================================
+.page-wrapper
+{
+   padding: 25px;
+
+   .section-page-control
+   {
+      a{ text-decoration: none; }
+      button:not(.btn-refresh):hover{
+         transform: scale(1.1);
+         transition: .5s;
+      }
+      button.btn-refresh { outline:none; }
+      button.btn-refresh:hover{
+          animation: spin 1s linear infinite;
+      }
+   }//End .section-page-control
+
+   table.tbl_mainList
+   {
+      width: 100%;
+      text-align: center;
+      border-collapse: separate;
+      border-spacing: 0 0.9rem;
+      th{
+
+      }
+      tbody
+      {
+         tr{
+            background-color: white;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+            td{
+                   padding: 15px;
+                    color: black;
+                  &:first-child {
+                      border-top-left-radius: .5rem;
+                      border-bottom-left-radius: .5rem;
+                  }
+                  &:last-child {
+                     border-top-right-radius: .5rem;
+                     border-bottom-right-radius: .5rem;
+                     div{
+                        display: inline-block;
+                        padding: 2px 10px;
+                        svg{ cursor: pointer; }
+                        svg:hover{
+                           transform: scale(1.2);
+                           transition: .5s;
+                        }
+                     }
+                  }//End &:last-child
+                  .img-table
+                  {
+                     max-height: 140px;
+                     max-width: 145px;
+                  }
+            }//End td
+         }//End tr
+      }//End tbody
+
+   }//end table.tbl_mainList
+
+
+}//End .page-wrapper
+// ====================== END Page==================================
+
+// Create & edit model
+.v-dialog .v-card__text{
+   overflow-x: hidden;
+}
+// model colors
+.v-application .grey.lighten-2 {
+  background-color: $_mainColor !important;
+  border-color: #ccc !important;
+  color: white;
+}
+
+.v-subheader {
+    font-size: 1.800rem;
+}
+
+.pointer{
+   cursor: pointer;
+}
+
+.v-card__title.headline.grey.lighten-2
+{
+    background-color: $_mainColor !important;
+}
+
+//==========for the Dark theme=============
+.v-application.theme--dark
+{
+    .table
+    {
+        color: white;
+    }
+}
+
+.pagination
+{
+  li{
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+      margin: 7px;
+      a{
+        display: block;
+        text-align: center;
+        border: 2px solid $_mainColor;
+        border-radius: 50px;
+        height: 35px;
+        width: 35px;
+        text-decoration: none;
+        color: $_mainColor;
+        padding-top: 4px;
+      }
+      &.active {
+        border-radius: 50px;
+        background-color: $_mainColor;
+        a{ color: white; }
+      }
+  }
+}

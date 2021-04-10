@@ -1,0 +1,165 @@
+.contact {
+}
+.contact-intro-container {
+    @include flex-start;
+    div {
+        max-width: 13rem;
+        margin: 0 0.5rem;
+        @include flex-center;
+    }
+}
+
+.about-middle-section {
+    @include flex-center;
+    margin: var(--section-margin) auto;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+        justify-content: flex-start;
+        margin: 2rem auto;
+    }
+}
+
+.about-middle-section-div {
+    margin: 0 2rem;
+    @include flex-start;
+    @media (max-width: 767px) {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.about-middle-section-left {
+}
+
+.icon-container {
+    width: 3rem;
+    height: 3rem;
+    // background-color: var(--gn-1);
+    border-radius: 50%;
+}
+
+.info-container {
+    @include flex-start;
+    margin: 0 0.5rem;
+}
+.about-middle-section-right {
+}
+
+.about-last-section {
+    @include flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .bout-middle-section-right{
+        margin: 0;
+    }
+    a{
+        transition: all .3s ease;
+    }
+    a:hover{
+        color: var(--gn-1);
+    }
+}
+.about-last-section-div {
+    margin: 0 2rem;
+    margin-top: 3rem;
+    
+    .news-letter-container{
+        background-color: white;
+        border: 1px solid var(--gr-2);
+        padding: 0;
+        form{
+            display: block;
+        }
+
+    }
+}
+.about-last-section-left {
+    flex: 0 1 31%;
+    @media (max-width: 767px) {
+        flex: 0 1 100%;
+        margin-bottom: 2rem;
+    }
+    .top {
+        padding-bottom: 2rem;
+        border-bottom: var(--border-1);
+    }
+    .bottom {
+        padding-top: 2rem;
+    }
+}
+
+.about-last-section-right {
+    flex: 0 1 48%;
+    @include flex-end;
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        flex: 0 1 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 2rem;
+        border: var(--border-1);
+        box-shadow: var(--shadow-1);
+    }
+    .contact-form-inputs-container {
+    }
+    .reg-form-group {
+        margin: 0;
+        margin-bottom: 2rem;
+        &:last-of-type {
+            align-items: flex-start;
+            .reg-form-inpput {
+                height: 8rem;
+            }
+        }
+        .reg-form-inpput {
+            flex: 0 1 65%;
+            @media (max-width: 767px) {
+                flex: 0 1 100%;
+            }
+        }
+        .reg-form-label {
+        }
+    }
+
+    .contact-form-btn-container {
+        @include flex-end;
+        @media (max-width: 767px) {
+            @include flex-center;
+        }
+        .add-to-cart-btn {
+            max-width: 12rem;
+        }
+    }
+
+
+}
+
+.contact-middle-section {
+    margin-top: 2.5rem !important;
+}
+.bottom{
+    h3 {
+        margin-bottom: 1rem;
+    }
+}
+
+.contact-link-section{
+    // margin: ;
+    border-bottom: var(--border-1);
+    border-top: var(--border-1);padding:1rem 0 ;
+
+}
+
+.how-can-we-help-section{
+    // margin: ;
+    // border-bottom: var(--border-1);
+    // border-top: var(--border-1);
+    padding:1rem 0 ;
+    padding-top: 0;
+    
+    div{
+        padding: 1rem 0;
+    }
+}

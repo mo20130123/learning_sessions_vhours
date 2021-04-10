@@ -1,0 +1,481 @@
+.register-container {
+    .register-heading {
+        max-width: 108rem;
+        margin-left: auto;
+    }
+}
+.direction-rtl .register-container{
+    .register-heading {
+        max-width: 108rem;
+        margin-right: auto;
+        margin-left:0;
+    }
+}
+.register-form {
+}
+.register-form-inputs-section {
+    @include flex-center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: var(--heading-margin);
+}
+.reg-form-group {
+    flex: 0 0 40%;
+    margin-bottom: 2.5rem;
+    @include flex-start;
+    justify-content: flex-end;
+    &:nth-child(odd) {
+        margin-right: 2rem;
+    }
+
+    &:nth-child(odd) {
+        margin-left: 2rem;
+    }
+    &:nth-child(10) {
+        flex-wrap: wrap;
+        span {
+            flex: 0 0 100%;
+            // text-align: right;
+            padding-left: 35%;
+            margin-top: 1rem;
+            @media (max-width: 767px) {
+                padding-left: 0%;
+            }
+        }
+    }
+}
+.direction-rtl .reg-form-group {
+  
+    &:nth-child(10) {
+        flex-wrap: wrap;
+        span {
+            flex: 0 0 100%;
+            // text-align: right;
+            padding-right: 35%;
+            padding-left:0;
+            margin-top: 1rem;
+            @media (max-width: 767px) {
+                padding-left: 0%;
+            }
+        }
+    }
+}
+.reg-form-label {
+    margin: 0 1.5rem;
+    font-size: 14px;
+}
+.reg-form-inpput {
+    border: 1px solid var(--gr-2);
+    padding: 0.8rem 0.5rem;
+    border-radius: 5px;
+    flex: 0 0 65%;
+    &:focus {
+        border: 1px solid var(--gr-1);
+    }
+}
+
+.register-form-btns-container {
+    width: 90%;
+    margin-left: auto;
+}
+.direction-rtl .register-form-btns-container {
+    width: 90%;
+    margin-left: 0;
+    margin-right:auto;
+}
+.chckbox-container {
+    @include flex-center;
+    label {
+        @include flex-center;
+        margin: 0 0.5rem;
+        a {
+            color: var(--gr-1);
+            font-size: 12px;
+            line-height: 1;
+            border-bottom: 1px solid var(--gr-1);
+        }
+        span {
+            margin: 0 0.5rem;
+            color: var(--gr-1);
+            font-size: 12px;
+            line-height: 1;
+        }
+    }
+}
+
+.register-btn-container {
+    margin: 2rem auto;
+    width: 16rem;
+}
+
+// PROFILE
+
+.profile-container {
+    .reg-form-group {
+        flex: 0 0 100%;
+    }
+    .reg-form-inpput {
+        flex: 0 0 80%;
+        padding: 1rem 0.5rem;
+        @media (max-width: 1023px) {
+            flex: 0 0 75%;
+        }
+        @media (max-width: 900px) {
+            flex: 0 0 66%;
+        }
+        @media (max-width: 767px) {
+            flex: 0 0 100%;
+        }
+    }
+    .reg-form-group {
+        // justify-content: center;
+    }
+    .register-form-inputs-section {
+        // justify-content: center;
+    }
+    .register-form-inputs-section {
+        width: 70%;
+        margin: auto;
+        @media (max-width: 767px) {
+            width: 95%;
+        }
+    }
+    // phone mob section
+    .phone-mob-container {
+        width: 100%;
+        @include flex-center;
+
+        .reg-form-group {
+            flex: 0 0 43%;
+        }
+        .reg-form-inpput {
+            flex: 0 0 64%;
+            padding: 1rem 0.5rem;
+        }
+        .reg-form-group {
+            margin-right: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .reg-form-label {
+                margin: 0 0.5rem;
+            }
+        }
+        @media (max-width: 1023px) {
+            display: block;
+            .reg-form-group {
+                flex: 0 0 100%;
+
+                &:nth-of-type(1) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+            .reg-form-inpput {
+                flex: 0 0 75%;
+                padding: 1rem 0.5rem;
+            }
+            .reg-form-label {
+                margin: 0 1.5rem;
+            }
+        }
+        @media (max-width: 900px) {
+            display: block;
+            .reg-form-group {
+                flex: 0 0 100%;
+            }
+            .reg-form-inpput {
+                flex: 0 0 66%;
+                padding: 1rem 0.5rem;
+            }
+            .reg-form-label {
+                margin: 0 1.5rem;
+            }
+        }
+        @media (max-width: 767px) {
+            .reg-form-inpput {
+                flex: 0 0 100%;
+            }
+            .reg-form-label {
+                flex: 0 0 95%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .select-brief-container {
+        width: 88%;
+        @media (max-width: 767px) {
+            width: 95%;
+        }
+    }
+    .register-btn-container {
+        width: 115%;
+        @media (max-width: 767px) {
+            width: 16rem;
+        }
+        .add-to-cart-btn {
+            margin: auto !important;
+        }
+    }
+}
+// phone mob section
+.profile-header-icons-container {
+    @include flex-between;
+    @media (max-width: 1100px) {
+        padding: 0 2rem;
+    }
+    @media (max-width: 767px) {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+}
+.profile-icons-container {
+    @include flex-between;
+    margin-bottom: var(--heading-margin);
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+.profile-icon-container {
+    @include flex-center;
+    margin: 0 1rem;
+
+    @media (max-width: 767px) {
+        margin: 0 0.2rem;
+    }
+    svg {
+        margin: 0 0.5rem;
+        width: 2.5rem;
+        transition: all 0.3s ease;
+        path {
+            transition: all 0.3s ease;
+        }
+        &:hover {
+            transform: scale(1.1);
+
+            path {
+                fill: var(--gn-3);
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
+.profile-parag:hover {
+    transition: all 0.3s ease;
+    &:hover {
+        color: var(--gn-3);
+    }
+}
+
+.my-brief-btn-container {
+    .reg-form-inpput {
+        border: none;
+        padding: 0;
+        flex: 0 0 77.5%;
+        @media (max-width: 767px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    .add-brief-btn-label {
+        max-width: 14rem;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 1rem;
+        color: var(--gn-3);
+        background-color: var(--gr-1);
+        transition: all 0.2s ease-in;
+        &:hover {
+            color: var(--gr-1);
+            background-color: var(--gn-3);
+        }
+    }
+}
+
+.select-brief-container {
+    width: 70%;
+    margin: auto;
+
+    @media (max-width: 767px) {
+        width: 95%;
+        .brief-edit-delet-container {
+            margin: auto;
+            width: 95%;
+        }
+    }
+    .register-btn-container {
+        button {
+            margin-right: 0 !important;
+            width: 15rem;
+            // display: none;
+        }
+    }
+
+    blockquote {
+        // margin-top: 1rem;
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        @media (max-width: 767px) {
+            width: 95%;
+        }
+    }
+}
+// .direction-rtl .select-brief-container {
+//     width: 70%;
+//     margin: auto;
+//     blockquote {
+//         // margin-top: 1rem;
+//         width: 80%;
+//         display: block;
+//         margin-left:0;
+//         margin-right: auto;
+//         @media (max-width: 767px) {
+//             width: 95%;
+//         }
+//     }
+// }
+
+.brief-edit-delet-container {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    @include flex-between;
+    border-bottom: 1px solid var(--gr-1);
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+.direction-rtl .brief-edit-delet-container {
+   
+    margin-left: 0;
+    margin-right: auto;
+    @include flex-between;
+    border-bottom: 1px solid var(--gr-1);
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    width: 82%;
+}
+.direction-rtl .my-brief-btn-container .reg-form-inpput{
+   
+    flex: 0 0 79.5%;
+}
+.direction-rtl .select-brief-container blockquote{
+    margin-right: auto;
+    margin-left: 0;
+    width: 82%
+}
+.brief-radio-group {
+    @include flex-center;
+    label {
+        line-height: 1;
+        margin: 0 0.5rem;
+        text-decoration: underline;
+    }
+}
+.brief-select-radio {
+}
+.brief-delet-edit-btns-container {
+    @include flex-between;
+}
+.edit-delet-brief-btn {
+    width: 2.5rem;
+    height: 5rem;
+    border: none;
+    outline: none;
+    margin: 0 0.3rem;
+    border-radius: 3px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: var(--shadow-dark);
+        // display: none;
+        transform: scale(1.1);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    @include flex-center;
+
+    img {
+        width: 1.5rem;
+    }
+    svg {
+        width: 1.8rem;
+        path {
+            transition: all 0.3s ease;
+        }
+        &:hover path {
+            fill: var(--gr-1);
+        }
+        #Path_475 {
+            transition: all 1s ease;
+        }
+        &:hover #Path_475 {
+            transform-origin: center;
+            transform: rotateZ(-90deg);
+        }
+        #Path_7010 {
+            transition: all 1s ease;
+        }
+        &:hover #Path_7010 {
+            // transform-origin: center;
+            // transform: scale(1.2);
+            fill: var(--gn-3);
+            // display: none;
+            // transform: translateX(-2px);
+        }
+    }
+}
+.edit-btn {
+    background-color: var(--black);
+}
+.delete-btn {
+    background-color: var(--red);
+}
+// PROFILE
+
+.reg-form-group {
+    @media (max-width: 1000px) {
+        flex: 0 0 47%;
+    }
+}
+@media (max-width: 1000px) {
+    .reg-form-group:nth-child(odd) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media (max-width: 850px) {
+    .reg-form-inpput {
+        flex: 0 0 62%;
+    }
+}
+@media (max-width: 767px) {
+    .register-form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .reg-form-group {
+        flex: 0 1 100%;
+        flex-wrap: wrap;
+    }
+    .reg-form-inpput {
+        flex: 0 0 100%;
+    }
+    .reg-form-label {
+        flex: 0 0 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .provider-form h3 {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,124 @@
+// @import "~aos/dist/aos.css";
+@import "base";
+@import "nav";
+@import "footer";
+@import "home";
+@import "products";
+@import "products-inner";
+@import "ads";
+@import "register";
+@import "brief";
+@import "terms";
+@import "forms";
+@import "faqs";
+@import "history";
+@import "order-details";
+@import "order-summary";
+@import "checkout";
+@import "wallet";
+@import "providers";                  
+@import "providers-inner";
+@import "providers-form";
+@import "about";
+@import "contact";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+// GRID
+// $grid-width: 114rem;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+* a {
+    display: block;
+}
+* button,
+input {
+    outline: none;
+}
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    // overflow-x: hidden;
+}
+html {
+
+    font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 52.5%;
+    }
+}
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 68%;
+    }
+}
+
+body {
+    // font-family: "Raleway", sans-serif;
+    // font-family: 'Inter', sans-serif;
+    // font-family: "Roboto", sans-serif;
+    font-family: "helvetica", sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--gr-1);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--gn-3);
+    // border-radius: 6px;
+    // border: 3px solid var(--gr-3);
+}
+
+.footer-popup{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .footer-popup-inner{
+        width: 38%;
+        padding: 2rem 4rem;
+        text-align: center;
+        background-color: white;
+        margin-bottom: 40%;
+        transform: translateY(100%);
+       
+        a {
+            text-decoration: underline;
+            margin-top: 1rem;
+            transition: all .3s ease;
+            
+            &:hover{
+                color: var(--gn-2);
+            }
+        }
+    }
+
+}

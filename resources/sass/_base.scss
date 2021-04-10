@@ -1,0 +1,268 @@
+// VARIABLES END
+:root {
+    // COLORS
+    --gn-1: #00a651;
+    // --gn-1: #3369ce;
+    --gn-2: #10dd57;
+    --gn-3: #66e69e;
+
+    --gr-1: #6e6969;
+    // --gr-1: #272727;
+    --gr-2: #d5d5d5;
+    --gr-3: #f2f2f2;
+
+    --red: #d9040c;
+    --black: #272727;
+    // COLORS
+
+    // FONT SIZES
+    // --m-p: 2.133rem;
+    --m-p: 1.3rem;
+    // --s-p: 1.3rem;
+    --s-p: 0.9rem;
+    // --h-m: 4rem;
+    --m-h: 2.06rem;
+    // --h-s: 3.3333rem;
+    --s-h: 1.721rem;
+    // --h-b: 5.2rem;
+    --h-b: 2.6832rem;
+    // --h-bb: 5.4666rem;
+    --h-bb: 2.82rem;
+    // FONT SIZES
+
+    // FONT WEIGHTS
+    // --light-font-weight: 300;
+    // --regular-font-weight: 400;
+    // --medium-font-weight: 500;
+    // --bold-font-weight: 700;
+    // FONT WEIGHTS
+    // // FONT WEIGHTS
+    // --light-font-weight: 100;
+    // --regular-font-weight: 200;
+    // --medium-font-weight: 300;
+    // --bold-font-weight: 500;
+    // // FONT WEIGHTS
+    // FONT WEIGHTS
+    --light-font-weight: 800;
+    --regular-font-weight: 800;
+    --medium-font-weight: 800;
+    --bold-font-weight: 800;
+    // FONT WEIGHTS
+
+    // GRID WIDTH
+    --grid-width: 120rem;
+    --heading-margin: 2.3rem;
+    --section-margin: 4.69rem;
+    --shadow-1: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    --shadow-2: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    --border-1: 1px solid #d5d5d5;
+    --border-2: 1px solid #6e6969;
+    --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+    // GRID WIDTH
+}
+// VARIABLES START
+
+//FONT WEIGHTS CLASSES START
+.light {
+    font-weight: var(--light-font-weight);
+}
+.regular {
+    font-weight: var(--regular-font-weight);
+}
+.medium {
+    font-weight: var(--medium-font-weight);
+}
+.bold {
+    font-weight: var(--bold-font-weight);
+}
+//FONT WEIGHTS CLASSES END
+
+//FONT SIZES CLASSES START
+.m-p {
+    font-size: var(--m-p);
+}
+.s-p {
+    font-size: var(--s-p);
+}
+.m-h {
+    font-size: var(--m-h);
+}
+.s-h {
+    font-size: var(--s-h);
+}
+.h-b {
+    font-size: var(--h-b);
+}
+.h-bb {
+    font-size: var(--h-bb);
+}
+//FONT SIZES CLASSES END
+
+// COLOR CLASSES END
+
+.gn-1 {
+    color: var(--gn-1);
+}
+.gn-2 {
+    color: var(--gn-2);
+}
+.gn-3 {
+    color: var(--gn-3);
+}
+.gr-1 {
+    color: var(--gr-1);
+}
+.gr-2 {
+    color: var(--gr-2);
+}
+.gr-3 {
+    color: var(--gr-3);
+}
+.red {
+    color: var(--red);
+}
+.black {
+    color: var(--color-black);
+}
+.white {
+    color: white;
+}
+
+// COLOR CLASSES START
+
+// HELPER CLASSES
+
+// MAIN SET UP START
+.container {
+    max-width: var(--grid-width);
+    margin: 0 auto;
+}
+
+.shadow-dark {
+    box-shadow: var(--shadow-dark);
+}
+.shadow-light {
+    box-shadow: var(--shadow-light);
+}
+// MAIN SET UP END
+
+// HELPER CLASSES START
+
+.cap {
+    text-transform: capitalize;
+}
+
+.upp {
+    text-transform: uppercase;
+}
+
+.hide {
+    opacity: 0;
+}
+.remove {
+    display: none !important;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.centermargin {
+    margin: 0 auto;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.width-10 {
+    width: 10%;
+}
+.width-20 {
+    width: 20%;
+}
+.width-30 {
+    width: 30%;
+}
+.width-40 {
+    width: 40%;
+}
+.width-50 {
+    width: 50%;
+}
+.width-55 {
+    width: 55%;
+}
+.width-60 {
+    width: 60%;
+}
+.width-65 {
+    width: 65%;
+}
+.width-70 {
+    width: 70%;
+}
+.width-75 {
+    width: 75%;
+}
+.width-80 {
+    width: 80%;
+}
+.width-90 {
+    width: 90%;
+}
+.width-100 {
+    width: 100%;
+}
+
+.position-rel {
+    position: relative;
+}
+
+@mixin flex-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@mixin flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin position-abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//   @include position-abs-center;
+
+// HELPER CLASSES END

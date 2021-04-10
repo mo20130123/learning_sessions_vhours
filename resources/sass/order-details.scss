@@ -1,0 +1,201 @@
+.order-details {
+    .orders-history-items-container {
+        display: block;
+        &:hover {
+            border: var(--border-1) !important;
+            box-shadow: var(--shadow-1) !important;
+        }
+    }
+}
+.orders-history {
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-breadcrum {
+    @include flex-start;
+    margin-bottom: 2rem;
+}
+
+.orders-history-items-container {
+    padding: 2rem;
+    border: var(--border-1);
+    box-shadow: var(--shadow-1);
+    //  @media (max-width: 800px) {
+    //     padding: 1rem;
+    //     padding-bottom: 3rem;
+    // }
+}
+.order-details-item-container {
+    border-bottom: var(--border-1);
+    padding: 2rem;
+    width: 100%;
+    padding-bottom: 3rem;
+    @media (max-width: 800px) {
+        padding: 1rem;
+        padding: 0;
+        padding-bottom: 3rem;
+        padding-top: 1rem;
+    }
+    & > * {
+        margin-bottom: 1.5rem;
+    }
+}
+.order-details-item-top {
+    @include flex-between;
+    flex-wrap: wrap;
+}
+.order-details-item-top-left {
+    @include flex-center;
+    // flex: 0 0 30rem;
+}
+.order-details-item-top-left-left {
+    width: 12rem;
+    @media (max-width: 800px) {
+        width: 10rem;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: var(--shadow-1);
+    }
+}
+.order-details-item-top-left-right {
+    margin: 0 1rem;
+    a {
+        display: block;
+    }
+}
+.order-details-item-top-right {
+    // flex: 0 0 15rem;
+    p {
+        text-align: center;
+    }
+}
+
+.order-details-item-bottom {
+    @include flex-between;
+    flex-wrap: wrap;
+}
+.order-details-item-bottom-left {
+    @include flex-between;
+    flex: 0 0 25rem;
+    display: none !important;
+    @media (max-width: 800px) {
+        flex: 0 0 100% !important;
+        margin-bottom: 2rem;
+        @include flex-start;
+        .order-details-item-bottom-left-stars {
+            margin: 0 1rem;
+        }
+    }
+}
+.order-details-item-bottom-left-stars {
+    @include flex-center;
+
+    & > * {
+        margin: 0 0.2rem;
+    }
+}
+.order-details-item-bottom-right {
+    @include flex-between;
+    flex: 0 0 70%;
+    // temp
+    flex: 0 0 85%;
+    // temp
+    @media (max-width: 800px) {
+        flex: 0 0 100% !important;
+        flex-wrap: wrap;
+
+        .order-details-item-bottom-right-timline {
+            flex: 0 0 100%;
+            margin-top: 2rem;
+        }
+    }
+}
+.order-details-item-bottom-right-timline {
+    position: relative;
+    @include flex-between;
+    flex: 0 0 75%;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 105%;
+        height: 2px;
+        background-color: var(--gr-2);
+        z-index: -1;
+        @media (max-width: 800px) {
+            width: 100%;
+        }
+    }
+}
+.direction-rtl .order-details-item-bottom-right-timline {
+   
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 105%;
+        height: 2px;
+        background-color: var(--gr-2);
+        z-index: -1;
+        transform: translateX(5%);
+        @media (max-width: 800px) {
+            width: 100%;
+            transform: translateX(0%);
+        }
+    }
+}
+
+.status-container {
+    position: relative;
+    // height: 6rem;
+    p {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 110%);
+        vertical-align: top;
+        line-height: 1.2;
+        font-size: 10px;
+
+        @media (max-width: 800px) {
+            font-size: 8px;
+        }
+    }
+}
+.status-icon-container {
+    @include flex-between;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    // background-color: green;
+    @media (max-width: 767px) {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+}
+
+.total-price-container {
+    margin-left: auto;
+    max-width: 28rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    @media (max-width: 767px) {
+        margin: auto;
+    }
+}
+.total-price-item-container {
+    @include flex-center;
+    padding: 0.5rem 0;
+    &:last-of-type {
+        border-top: 1px solid var(--gr-2);
+    }
+}

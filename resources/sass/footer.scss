@@ -1,0 +1,143 @@
+.footer {
+    width: 100%;
+    background-color: var(--gr-3);
+}
+
+.copy-right-container {
+    padding: 1rem;
+    background-color: var(--gr-1);
+}
+
+.foore-container {
+    @include flex-between;
+    align-items: flex-start;
+    padding: 5rem 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-sitemap {
+    flex: 0 0 20%;
+    & h3 {
+        margin-bottom: 2rem;
+        @media (max-width: 800px) {
+            margin-bottom: .5rem;
+        }
+    }
+    @media (max-width: 800px) {
+        flex: 0 0 40%;
+    }
+    @media (max-width: 767px) {
+        flex: 0 0 60%;
+    }
+}
+.footer-link {
+    padding: 0.5rem 0;
+    &:hover {
+        color: var(--gn-1);
+    }
+}
+
+.copy-right-container-inner {
+    @include flex-between;
+    flex-wrap: wrap;
+}
+
+.copy-right-left {
+    @include flex-between;
+    flex: 0 0 45%;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+        flex: 0 0 90%;
+        justify-content: flex-start;
+    }
+
+    & p {
+        display: flex;
+        @media (max-width: 767px) {
+            flex: 0 0 100%;
+        }
+    }
+    & a {
+        display: inline;
+        margin: 0 0.5rem;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: var(--gn-3);
+        }
+    }
+}
+
+.copy-right-right {
+    @include flex-end;
+    justify-content: flex-end;
+    flex: 0 0 37%;
+    @media (max-width: 767px) {
+        flex: 0 0 90%;
+        margin-top: 1rem;
+        justify-content: flex-start;
+    }
+}
+
+.footer-icon-container {
+    margin: 0 2rem;
+    & > * {
+        width: 1.5rem;
+        margin: 0 0.5rem;
+    }
+}
+
+.news-letter-container {
+    background-color: var(--gr-2);
+    padding: 2rem 1rem;
+
+    form {
+        @include flex-center;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            @include flex-start;
+        }
+    }
+    label {
+        color: white;
+        font-size: 2rem;
+        margin: 0 1rem;
+        text-shadow: var(--shadow-2);
+        @media (max-width: 767px) {
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+    }
+}
+.input-btn-group {
+    @include flex-center;
+    align-items: stretch;
+    // margin: 0 1rem;
+    flex: 0 1 40rem;
+}
+.news-letter-input {
+    padding: 1rem;
+    flex: 0 1 90%;
+    border: none;
+    &:focus {
+        border: 1px solid var(--gr-1);
+    }
+}
+
+.news-letter-btn {
+    background-color: var(--gr-1);
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--gn-1);
+    }
+    img {
+        width: 2.2rem;
+    }
+}
+
+.footer-temp-link{
+    cursor: pointer;
+}
